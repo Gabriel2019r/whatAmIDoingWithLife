@@ -227,11 +227,6 @@ class PlayState extends MusicBeatState
 	public var cpuControlled:Bool = false;
 	public var practiceMode:Bool = false;
 
-	screenshader.waveAmplitude = 1;
-	screenshader.waveFrequency = 2;
-	screenshader.waveSpeed = 1;
-	screenshader.shader.uTime.value[0] = new flixel.math.FlxRandom().float(-100000, 100000);
-
 	public var botplaySine:Float = 0;
 	public var botplayTxt:FlxText;
 

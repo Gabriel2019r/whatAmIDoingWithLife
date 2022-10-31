@@ -23,6 +23,9 @@ class Alphabet extends FlxSpriteGroup
 {
 	public var text(default, set):String;
 
+	public var menuType(default, set):String;
+	public var itemType:String = "";
+
 	public var bold:Bool = false;
 	public var letters:Array<AlphaCharacter> = [];
 
@@ -210,6 +213,24 @@ class Alphabet extends FlxSpriteGroup
 			}
 			super.update(elapsed);
 		}
+	
+		public function killTheTimer() {
+			if(typeTimer != null) {
+				typeTimer.cancel();
+				typeTimer.destroy();
+			}
+			typeTimer = null;
+		}
+	
+		inline function set_menuType(value:String)
+		{
+			if (value == 'Centered')
+				screenCenter(X);
+	
+			menuType = value;
+			return value;
+		}
+	}
 
 	public function snapToPosition()
 	{
