@@ -288,6 +288,8 @@ class PlayState extends MusicBeatState
 	var timeTxt:FlxText;
 	var scoreTxtTween:FlxTween;
 
+	public var elapsedtime:Float = 0;
+
 	public static var campaignScore:Int = 0;
 	public static var campaignMisses:Int = 0;
 	public static var seenCutscene:Bool = false;
@@ -410,7 +412,7 @@ class PlayState extends MusicBeatState
 		screenshader.waveFrequency = 2;
 		screenshader.waveSpeed = 1;
 		screenshader.shader.uTime.value[0] = new flixel.math.FlxRandom().float(-100000, 100000);
-		
+
 		// var gameCam:FlxCamera = FlxG.camera;
 		camGame = new FlxCamera();
 		camHUD = new FlxCamera();
@@ -2926,95 +2928,29 @@ class PlayState extends MusicBeatState
 						shad.uTime.value[0] += elapsed;
 					}
 			}
-		if(funnyFloatyBoys.contains(dad.curCharacter.toLowerCase()) && canFloat && orbit)
-			{
-				switch(dad.curCharacter) 
-				{
-					case 'bandu-candy':
-						dad.x += Math.sin(elapsedtime * 50) / 9;
-					case 'bandu':
-						dad.x = boyfriend.getMidpoint().x + Math.sin(banduJunk) * 500 - (dad.width / 2);
-						dad.y += (Math.sin(elapsedtime) * 0.2);
-			
-						/*
-						var deezScale =	(
-							!dadFront ?
-							Math.sqrt(
-							boyfriend.getMidpoint().distanceTo(dad.getMidpoint()) / 500 * 0.5):
-							Math.sqrt(
-							(500 - boyfriend.getMidpoint().distanceTo(dad.getMidpoint())) / 500 * 0.5 + 0.5));
-							dad.scale.set(deezScale, deezScale);
-							dadmirror.scale.set(deezScale, deezScale);
-							*/
-				
-						if ((Math.sin(banduJunk) >= 0.95 || Math.sin(banduJunk) <= -0.95) && !hasJunked){
-							dadFront = !dadFront;
-							hasJunked = true;
-						}
-						if (hasJunked && !(Math.sin(banduJunk) >= 0.95 || Math.sin(banduJunk) <= -0.95)) hasJunked = false;
-			
-						dad.visible = !dadFront;
-					case 'badai':
-						dad.angle += elapsed * 10;
-						dad.y += (Math.sin(elapsedtime) * 0.6);
-					default:
-						dad.y += (Math.sin(elapsedtime) * 0.6);
-					}
-				}
-				if(badai != null)
-				{
-					switch(badai.curCharacter) 
-					{
-						case 'bandu':
-							badai.x = boyfriend.getMidpoint().x + Math.sin(banduJunk) * 500 - (dad.width / 2);
-							badai.y += (Math.sin(elapsedtime) * 0.2);
-				
-							/*
-							var deezScale =	(
-								!dadFront ?
-								Math.sqrt(
-							boyfriend.getMidpoint().distanceTo(dad.getMidpoint()) / 500 * 0.5):
-							Math.sqrt(
-							(500 - boyfriend.getMidpoint().distanceTo(dad.getMidpoint())) / 500 * 0.5 + 0.5));
-							dad.scale.set(deezScale, deezScale);
-							dadmirror.scale.set(deezScale, deezScale);
-							*/
-				
-							if ((Math.sin(banduJunk) >= 0.95 || Math.sin(banduJunk) <= -0.95) && !hasJunked){
-								dadFront = !dadFront;
-								hasJunked = true;
-							}
-							if (hasJunked && !(Math.sin(banduJunk) >= 0.95 || Math.sin(banduJunk) <= -0.95)) hasJunked = false;
-				
-							badai.visible = !dadFront;
-						case 'badai':
-							badai.angle = Math.sin(elapsedtime) * 15;
-							badai.x += Math.sin(elapsedtime) * 0.6;
-							badai.y += (Math.sin(elapsedtime) * 0.6);
-						default:
-							badai.y += (Math.sin(elapsedtime) * 0.6);
-					}
-				}
-				if (littleIdiot != null) {
-					if(funnyFloatyBoys.contains(littleIdiot.curCharacter.toLowerCase()) && canFloat && poipInMahPahntsIsGud)
-					{
-						littleIdiot.y += (Math.sin(elapsedtime) * 0.75);
-						littleIdiot.x = 200 + Math.sin(elapsedtime) * 425;
-					}
-				}
-				if (swaggy != null) {
+
+		if (swaggy != null) {
 					if(funnyFloatyBoys.contains(swaggy.curCharacter.toLowerCase()) && canSlide)
 					{
 						swaggy.x += (Math.sin(elapsedtime) * 1.4);
 					}
 				}
-				if(funnySideFloatyBoys.contains(dad.curCharacter.toLowerCase()) && canSlide)
+		if(funnySideFloatyBoys.contains(dad.curCharacter.toLowerCase()) && canSlide)
 				{
 					dad.x += (Math.cos(elapsedtime) * 0.6);
 				}
-				if(funnyFloatyBoys.contains(boyfriend.curCharacter.toLowerCase()) && canFloat)
+		if(funnySideFloatyBoys.contains(boyfriend.curCharacter.toLowerCase()) && canSlide)
+				{
+					boyfriend.x += (Math.cos(elapsedtime) * 0.6);
+				}
+
+		if(funnyFloatyBoys.contains(boyfriend.curCharacter.toLowerCase()) && canFloat)
 				{
 					boyfriend.y += (Math.sin(elapsedtime) * 0.6);
+				}
+		if(funnyFloatyBoys.contains(boyfriend.curCharacter.toLowerCase()) && canFloat)
+				{
+					dad.y += (Math.sin(elapsedtime) * 0.6);
 				}
 		callOnLuas('onUpdate', [elapsed]);
 
