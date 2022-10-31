@@ -169,6 +169,7 @@ class PlayState extends MusicBeatState
 	var funnyFloatyBoys:Array<String> = ['insert'];
 	var funnySideFloatyBoys:Array<String> = ['bombu', 'bombu-expunged'];
 	var canSlide:Bool = true;
+	var canFloat = true;
 
 	public var notes:FlxTypedGroup<Note>;
 	public var unspawnNotes:Array<Note> = [];
