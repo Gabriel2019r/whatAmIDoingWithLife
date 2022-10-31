@@ -133,6 +133,7 @@ class TitleState extends MusicBeatState
 
 		ClientPrefs.loadPrefs();
 
+		/*
 		#if CHECK_FOR_UPDATES
 		if(ClientPrefs.checkForUpdates && !closedState) {
 			trace('checking for update');
@@ -156,6 +157,7 @@ class TitleState extends MusicBeatState
 			http.request();
 		}
 		#end
+		*/
 
 		Highscore.load();
 
