@@ -60,10 +60,8 @@ import StageData;
 import FunkinLua;
 import DialogueBoxPsych;
 import Conductor.Rating;
-#if windows
 import openfl.filters.ShaderFilter;
 import Shaders.PulseEffect;
-#end
 
 #if !flash 
 import flixel.addons.display.FlxRuntimeShader;
@@ -408,6 +406,11 @@ class PlayState extends MusicBeatState
 		practiceMode = ClientPrefs.getGameplaySetting('practice', false);
 		cpuControlled = ClientPrefs.getGameplaySetting('botplay', false);
 
+		screenshader.waveAmplitude = 1;
+		screenshader.waveFrequency = 2;
+		screenshader.waveSpeed = 1;
+		screenshader.shader.uTime.value[0] = new flixel.math.FlxRandom().float(-100000, 100000);
+		
 		// var gameCam:FlxCamera = FlxG.camera;
 		camGame = new FlxCamera();
 		camHUD = new FlxCamera();
