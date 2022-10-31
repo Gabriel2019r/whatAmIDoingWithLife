@@ -1051,7 +1051,7 @@ class PlayState extends MusicBeatState
 		if(ClientPrefs.downScroll) strumLine.y = FlxG.height - 150;
 		strumLine.scrollFactor.set();
 
-		var showTime:Bool =  (!ClientPrefs.hideTime);
+		var showTime:Bool = (ClientPrefs.timeBarType != 'Disabled');
 
 		if(ClientPrefs.timeBarType == 'Song Name')
 		{
