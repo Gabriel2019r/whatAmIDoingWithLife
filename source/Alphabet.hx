@@ -1054,4 +1054,4 @@ class AlphaCharacter extends FlxSprite
 		}
 	}
 }
-*/
+/*
