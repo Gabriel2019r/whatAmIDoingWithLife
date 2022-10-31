@@ -1548,7 +1548,6 @@ class PlayState extends MusicBeatState
 	}
 
 	public function reloadTimeBarColors() {
-		if(ClientPrefs.colorBars) {
 		    timeBar.createFilledBar(FlxColor.BLACK, FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]));
 		} else {
 			timeBar.createFilledBar(0xFF000000, 0xFF66FF33);
