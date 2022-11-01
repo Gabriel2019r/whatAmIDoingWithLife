@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-40,
+				-120
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Bav idle"
+		},
+		{
+			"offsets": [
+				-40,
+				-120
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Bav left"
+		},
+		{
+			"offsets": [
+				-40,
+				-120
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Bav down"
+		},
+		{
+			"offsets": [
+				-40,
+				-120
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Bav up"
+		},
+		{
+			"offsets": [
+				-40,
+				-120
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Bav right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Bav",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "bave",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		0,
+		21
+	],
+	"camera_position": [
+		-90,
+		-60
+	],
+	"sing_duration": 6.1,
+	"scale": 1.2
+}
