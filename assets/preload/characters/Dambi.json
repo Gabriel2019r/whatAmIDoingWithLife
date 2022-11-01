@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-40,
+				-120
+			],
+			"anim": "idle",
+			"fps": 60,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-40,
+				-120
+			],
+			"anim": "singLEFT",
+			"fps": 60,
+			"name": "left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-40,
+				-120
+			],
+			"anim": "singDOWN",
+			"fps": 60,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-40,
+				-120
+			],
+			"anim": "singUP",
+			"fps": 60,
+			"name": "up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-40,
+				-120
+			],
+			"anim": "singRIGHT",
+			"fps": 60,
+			"name": "right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Dambi",
+	"position": [
+		40,
+		180
+	],
+	"healthicon": "dambi",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		102,
+		0
+	],
+	"camera_position": [
+		-90,
+		130
+	],
+	"sing_duration": 6.1,
+	"scale": 1.2
+}
