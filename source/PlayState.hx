@@ -562,7 +562,8 @@ class PlayState extends MusicBeatState
 
 				case 'Lockers':
 					{
-						var schoolHall:BGSprite = new BGSprite('Bave/Lockers', 700, 470, 1.4, 1.4);
+						var schoolHall:BGSprite = new BGSprite('Bave/Lockers', -600, 370, 0.9, 0.9);
+						schoolHall.scale.set(1.4, 1.4);
 						add(schoolHall);
 						schoolHall.active = true;
 					}
